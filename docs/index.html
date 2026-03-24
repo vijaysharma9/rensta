@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<title>Rensta Property Services | Coming Soon</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+	<style>
+		:root {
+			--primary: #001255;
+			--accent: #2563EB;
+			--hero-blue: #0056DD;
+			--white: #ffffff;
+			--overlay: rgba(0, 18, 85, 0.80);
+		}
+
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		html {
+			scroll-behavior: smooth;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			font-family: 'Poppins', sans-serif;
+			font-size: 16px;
+			line-height: 1.6;
+			color: var(--primary);
+			overflow-x: hidden;
+			margin: 0;
+			padding: 0;
+		}
+
+		body.page-template-page-coming-soon-php {
+			padding: 0 !important;
+		}
+
+
+		img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+		}
+
+		a {
+			text-decoration: none;
+			color: inherit;
+		}
+
+		/* SECTION 1: HERO */
+		.hero-section {
+			width: 100%;
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			position: relative;
+			background: #001255 url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1920') center/cover no-repeat;
+			padding: 60px 20px;
+		}
+
+		.hero-section::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: rgba(0, 18, 85, 0.80);
+			z-index: 0;
+		}
+
+		.hero-inner {
+			position: relative;
+			z-index: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+
+		.hero-logo {
+			position: relative;
+			margin-bottom: 40px;
+		}
+
+		.hero-logo img {
+			height: auto;
+			width: auto;
+			object-fit: contain;
+		}
+
+		.hero-logo-text.hero-logo-fallback {
+			display: none;
+		}
+
+		.hero-logo-text {
+			text-align: center;
+			color: #ffffff;
+		}
+
+		.hero-logo-text .brand {
+			font-size: 28px;
+			font-weight: 700;
+			color: #ffffff;
+			letter-spacing: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 4px;
+		}
+
+		.hero-logo-text .brand i {
+			font-size: 18px;
+		}
+
+		.hero-logo-text .tagline {
+			font-size: 10px;
+			font-weight: 400;
+			letter-spacing: 3px;
+			text-transform: uppercase;
+			margin-top: 2px;
+			color: #ffffff;
+		}
+
+		.hero-sub {
+			font-size: 15px;
+			font-weight: 700;
+			color: #ffffff;
+			line-height: 100%;
+			letter-spacing: 0;
+			text-align: center;
+			margin-bottom: 12px;
+		}
+
+		.hero-heading {
+			font-size: 82.97px;
+			font-weight: 600;
+			color: #ffffff;
+			line-height: 100%;
+			letter-spacing: 0;
+			text-transform: uppercase;
+			margin-bottom: 32px;
+		}
+
+		.trust-badges {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 16px;
+			margin-bottom: 32px;
+			background: #ffffff;
+			border-radius: 0;
+		}
+
+		.trust-badges img {
+			width: 318px;
+			max-width: 100%;
+			object-fit: contain;
+		}
+
+		.hero-email-label {
+			font-size: 12.96px;
+			font-weight: 700;
+			color: #ffffff;
+			line-height: 100%;
+			letter-spacing: 0;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+
+		.hero-email-wrap {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+		}
+
+		.hero-email-wrap input {
+			width: 269px;
+			height: 35px;
+			padding: 8.64px 12.1px;
+			background: #ffffff;
+			border: none;
+			border-radius: 0;
+			font-family: 'Poppins', sans-serif;
+			font-size: 12.1px;
+			font-weight: 400;
+			color: #374151;
+		}
+
+		.hero-email-wrap input::placeholder {
+			color: #9CA3AF;
+		}
+
+		.hero-email-wrap input:focus {
+			outline: none;
+		}
+
+		.hero-email-wrap .hero-get-notified-btn {
+			width: 124.45px;
+			height: 35.28px;
+			padding: 8.64px 12.1px;
+			background: #0056DD;
+			color: #ffffff;
+			border: none;
+			border-radius: 0;
+			font-family: 'Poppins', sans-serif;
+			font-size: 12.1px;
+			font-weight: 400;
+			text-align: center;
+			cursor: pointer;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.hero-email-wrap .hero-get-notified-btn:hover {
+			opacity: 0.95;
+		}
+
+		.email-form {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.5rem;
+			justify-content: center;
+			margin-bottom: 1rem;
+			max-width: 400px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.email-form input {
+			flex: 1;
+			min-width: 200px;
+			padding: 0.875rem 1rem;
+			border: 2px solid rgba(255, 255, 255, 0.3);
+			border-radius: 0;
+			background: rgba(255, 255, 255, 0.1);
+			color: var(--white);
+			font-family: inherit;
+			font-size: 1rem;
+		}
+
+		.email-form input::placeholder {
+			color: rgba(255, 255, 255, 0.6);
+		}
+
+		.email-form input:focus {
+			outline: none;
+			border-color: var(--accent);
+		}
+
+		.btn {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 0.5rem;
+			padding: 0.875rem 1.5rem;
+			font-family: inherit;
+			font-size: 1rem;
+			font-weight: 600;
+			border: none;
+			cursor: pointer;
+			transition: opacity 0.2s, transform 0.2s;
+			border-radius: 0;
+		}
+
+		.btn:hover {
+			opacity: 0.95;
+			transform: translateY(-1px);
+		}
+
+		.btn-primary {
+			background: var(--accent);
+			color: var(--white);
+		}
+
+		.hero-or {
+			font-size: 12.96px;
+			font-weight: 700;
+			color: #ffffff;
+			line-height: 100%;
+			letter-spacing: 0;
+			text-align: center;
+			margin-top: 24px;
+			margin-bottom: 10px;
+		}
+
+		.btn-hero-phone {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			background: #0056DD;
+			border-radius: 30px;
+			padding: 10px 18px;
+			color: #ffffff;
+			font-family: 'Poppins', sans-serif;
+			font-size: 13px;
+			font-weight: 400;
+			border: none;
+			height: 28px;
+			cursor: pointer;
+		}
+
+		.btn-hero-phone i {
+			font-size: 13px;
+		}
+
+		.btn-outline {
+			background: transparent;
+			color: var(--white);
+			border: 2px solid rgba(255, 255, 255, 0.6);
+		}
+
+		.btn-outline:hover {
+			border-color: var(--white);
+			background: rgba(255, 255, 255, 0.1);
+		}
+
+		.btn-navy {
+			background: var(--primary);
+			color: var(--white);
+			border-radius: 0;
+		}
+
+
+		.hero .form-success {
+			display: none;
+			color: #34d399;
+			font-size: 12px;
+			margin-top: 8px;
+		}
+
+		.form-success.show {
+			display: block;
+		}
+
+		/* GLOBAL CONTAINER */
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 0 40px;
+		}
+
+		/* SECTION 2: ABOUT */
+		.about-section {
+			width: 100%;
+			background: #ffffff;
+			padding: 80px 0;
+		}
+
+		.about-section .container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 0 40px;
+		}
+
+		.about-inner {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 60px;
+			align-items: center;
+		}
+
+		.about-image-wrap {
+			width: 100%;
+			overflow: hidden;
+			border-radius: 0;
+		}
+
+		.about-image {
+			width: 100%;
+			height: 420px;
+			object-fit: cover;
+			border-radius: 0;
+		}
+
+		.about-label {
+			display: flex;
+			align-items: center;
+			gap: 6px;
+			font-family: 'Poppins', sans-serif;
+			font-weight: 400;
+			font-size: 14px;
+			color: #2563EB;
+			margin-bottom: 16px;
+		}
+
+		.section-tick-icon {
+			height: 14px;
+			width: auto;
+			object-fit: contain;
+			flex-shrink: 0;
+		}
+
+		.about h2 {
+			font-size: 30px;
+			font-weight: 800;
+			color: #001255;
+			line-height: 100%;
+			letter-spacing: 0.06em;
+			margin-bottom: 20px;
+		}
+
+		.about-sub {
+			font-size: 20px;
+			font-weight: 600;
+			color: #001255;
+			text-transform: uppercase;
+			letter-spacing: 0;
+			line-height: 100%;
+			margin-bottom: 16px;
+		}
+
+		.about-text {
+			font-size: 15px;
+			font-weight: 400;
+			line-height: 1.7;
+			color: #374151;
+			margin-bottom: 32px;
+		}
+
+		.about .btn-navy {
+			width: 270px;
+			height: 49px;
+			background: #001255;
+			color: #ffffff;
+			border: none;
+			border-radius: 0;
+			font-family: 'Poppins', sans-serif;
+			font-size: 16px;
+			font-weight: 400;
+			text-transform: capitalize;
+			letter-spacing: 0;
+			line-height: 100%;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		/* SECTION 3: SERVICES */
+		.services-section {
+			width: 100%;
+			text-align: center;
+			padding: 0 0 80px 0;
+		}
+
+		.services-section .container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 80px 40px;
+			background: #001255;
+			border-left: 40px solid #fff;
+			border-right: 40px solid #fff;
+		}
+
+		.services-label {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 6px;
+			font-family: 'Poppins', sans-serif;
+			font-weight: 400;
+			font-size: 14px;
+			color: #2563EB;
+			margin-bottom: 12px;
+			text-align: center;
+		}
+
+
+		.services-section h2 {
+			font-size: 36px;
+			font-weight: 700;
+			color: #ffffff;
+			text-align: center;
+			margin-bottom: 50px;
+		}
+
+		.services-grid {
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			gap: 40px 20px;
+			margin-top: 40px;
+		}
+
+		.service-item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			gap: 16px;
+		}
+
+		.service-icon {
+			width: 64px;
+			height: 64px;
+			background: rgba(255, 255, 255, 0.10);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 26px;
+			color: #ffffff;
+		}
+
+		.service-item span {
+			font-size: 13px;
+			font-weight: 400;
+			color: #ffffff;
+			text-align: center;
+			line-height: 1.5;
+			max-width: 130px;
+		}
+
+		/* SECTION 4: FOOTER */
+		.footer-section {
+			width: 100%;
+			background: #001255;
+			padding: 0;
+			margin: 0;
+			overflow: hidden;
+		}
+
+		.footer-section .container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 0 40px;
+		}
+
+		.footer-inner {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			align-items: start;
+			gap: 40px;
+			padding: 60px 0;
+		}
+
+		.footer-logo {
+			margin-bottom: 0;
+		}
+
+		.footer-logo img {
+			height: auto;
+			max-width: 180px;
+			object-fit: contain;
+		}
+
+		.footer-logo-text.footer-logo-fallback {
+			display: none;
+		}
+
+		.footer-logo-text {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		.footer-logo-text .brand {
+			font-size: 24px;
+			font-weight: 700;
+			color: #ffffff;
+			letter-spacing: 0;
+			display: flex;
+			align-items: center;
+			gap: 2px;
+		}
+
+		.footer-logo-text .brand i {
+			font-size: 12px;
+			opacity: 0.9;
+		}
+
+		.footer-logo-text .tagline {
+			font-size: 10px;
+			font-weight: 400;
+			letter-spacing: 2px;
+			color: #ffffff;
+			margin-top: 2px;
+			text-transform: uppercase;
+		}
+
+		.footer-heading {
+			font-size: 24px;
+			font-weight: 700;
+			color: #ffffff;
+			line-height: 100%;
+			letter-spacing: 0;
+			margin-top: 24px;
+			max-width: 320px;
+		}
+
+		.footer-email-row {
+			display: flex;
+			gap: 10px;
+			margin-top: 20px;
+		}
+
+		.footer-email-row input {
+			width: 269px;
+			height: 35px;
+			padding: 8.64px 12.1px;
+			background: #ffffff;
+			border: none;
+			border-radius: 0;
+			font-family: 'Poppins', sans-serif;
+			font-size: 12.1px;
+			font-weight: 400;
+			color: #374151;
+		}
+
+		.footer-email-row input::placeholder {
+			color: #9CA3AF;
+		}
+
+		.footer-email-row input:focus {
+			outline: none;
+		}
+
+		.footer-email-row .footer-get-notified-btn {
+			width: 144px;
+			height: 35px;
+			padding: 10px 14px;
+			background: #2563EB;
+			color: #ffffff;
+			border: none;
+			border-radius: 0;
+			font-family: 'Poppins', sans-serif;
+			font-size: 14px;
+			font-weight: 400;
+			text-align: center;
+			cursor: pointer;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.footer-email-row .footer-get-notified-btn:hover {
+			opacity: 0.95;
+		}
+
+		.footer-cert-label {
+			font-size: 20px;
+			font-weight: 700;
+			color: #ffffff;
+			text-transform: uppercase;
+			letter-spacing: 0;
+			line-height: 100%;
+			margin-bottom: 12px;
+		}
+
+		.footer-cert-underline {
+			width: 40px;
+			height: 3px;
+			background: #2563EB;
+			margin-bottom: 20px;
+		}
+
+		.footer-badges {
+			display: flex;
+			align-items: center;
+			gap: 16px;
+		}
+
+		.footer-badges img {
+			height: auto;
+			max-width: 385px;
+			width: 100%;
+			object-fit: contain;
+		}
+
+		.footer-phone-btn {
+			margin-top: 20px;
+			height: 28px;
+			background: #2563EB !important;
+			border: none !important;
+			border-radius: 40px;
+			padding: 10px 20px;
+			color: #ffffff !important;
+			font-family: 'Poppins', sans-serif;
+			font-size: 14px;
+			font-weight: 400;
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+		}
+
+		.footer-phone-btn i {
+			font-size: 14px;
+		}
+
+		.footer-bottom-bar {
+			background: #000d3d;
+			padding: 14px 0;
+			color: #ffffff;
+			font-size: 13px;
+			font-weight: 400;
+			text-align: center;
+			opacity: 0.8;
+		}
+
+		.footer .form-success {
+			margin-top: 10px;
+			font-size: 14px;
+		}
+
+		.footer,
+		.footer-bottom-bar {
+			margin-bottom: 0;
+		}
+
+		/* RESPONSIVE */
+		@media (max-width: 1024px) {
+			.services-grid {
+				grid-template-columns: repeat(3, 1fr);
+			}
+		}
+
+		@media (max-width: 768px) {
+			.hero {
+				padding: 40px 20px;
+			}
+
+			.hero-logo-text .brand {
+				font-size: 22px;
+			}
+
+			.hero-logo-text .tagline {
+				font-size: 9px;
+				letter-spacing: 2px;
+			}
+
+			.hero-heading {
+				font-size: 3.5rem;
+				margin-bottom: 24px;
+			}
+
+			.hero-email-wrap {
+				flex-direction: column;
+				align-items: center;
+				max-width: 320px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.hero-email-wrap input {
+				width: 100%;
+				max-width: 269px;
+			}
+
+			.hero-email-wrap .hero-get-notified-btn {
+				width: 100%;
+				max-width: 269px;
+			}
+
+			.email-form {
+				flex-direction: column;
+				width: 100%;
+				max-width: 100%;
+				padding: 0 0.5rem;
+			}
+
+			.email-form input {
+				min-width: 0;
+				width: 100%;
+			}
+
+			.email-form .btn {
+				width: 100%;
+			}
+
+			.container,
+			.about-section .container,
+			.services-section .container,
+			.footer-section .container {
+				padding: 0 20px;
+			}
+
+			.about-inner {
+				grid-template-columns: 1fr;
+				text-align: center;
+			}
+
+			.about-image-wrap {
+				order: -1;
+			}
+
+			.about-image {
+				height: 320px;
+			}
+
+			.about-content {
+				text-align: center;
+			}
+
+			.about-label {
+				justify-content: center;
+			}
+
+			.about .btn-navy {
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.services-grid {
+				grid-template-columns: repeat(2, 1fr);
+				gap: 24px 16px;
+			}
+
+			.service-icon {
+				width: 56px;
+				height: 56px;
+				font-size: 24px;
+			}
+
+			.service-item span {
+				font-size: 13px;
+				max-width: 130px;
+			}
+
+			.footer-inner {
+				padding: 48px 0;
+				grid-template-columns: 1fr;
+				gap: 36px;
+			}
+
+			.footer-left {
+				text-align: center;
+			}
+
+			.footer-logo {
+				display: flex;
+				justify-content: center;
+			}
+
+			.footer-logo img {
+				margin: 0 auto;
+			}
+
+			.footer-logo-text {
+				align-items: center;
+			}
+
+			.footer-heading {
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+			}
+
+			.footer-email-row {
+				flex-direction: column;
+				align-items: center;
+				max-width: 320px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.footer-email-row input {
+				width: 100%;
+				max-width: 269px;
+			}
+
+			.footer-email-row .footer-get-notified-btn {
+				width: 100%;
+				max-width: 269px;
+			}
+
+			.footer-right {
+				text-align: center;
+			}
+
+			.footer-cert-underline {
+				margin-left: 0;
+			}
+
+			.footer-badges {
+				justify-content: center;
+				flex-wrap: wrap;
+			}
+
+		}
+
+		@media (max-width: 480px) {
+			.hero-section {
+				min-height: auto;
+			}
+
+			.hero-inner {
+				padding: 4.5rem 1rem 1.5rem;
+			}
+
+			.hero-heading {
+				font-size: 2.75rem;
+			}
+
+			.about h2 {
+				font-size: 24px;
+			}
+
+			.about-sub {
+				font-size: 16px;
+			}
+
+			.about-image {
+				height: 280px;
+			}
+
+			.services-section .container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 40px 20px;
+				background: #001255;
+				border-left: 20px solid #fff;
+				border-right: 20px solid #fff;
+			}
+
+			.services-section h2 {
+				font-size: 28.8px;
+				margin-bottom: 40px;
+			}
+
+			.services-label {
+				font-size: 11.2px;
+			}
+
+			.section-tick-icon {
+				height: 12px;
+			}
+
+			.services-grid {
+				gap: 20px 12px;
+			}
+
+			.service-icon {
+				width: 52px;
+				height: 52px;
+				font-size: 20px;
+			}
+
+			.service-item span {
+				font-size: 12px;
+				max-width: 110px;
+			}
+
+			.footer-inner {
+				padding: 36px 0;
+			}
+
+			.footer-logo-text .brand {
+				font-size: 20px;
+			}
+
+			.footer-heading {
+				font-size: 18px;
+			}
+
+			.hero-email-wrap input,
+			.hero-email-wrap .hero-get-notified-btn,
+			.footer-email-row input,
+			.footer-email-row .footer-get-notified-btn {
+				max-width: 100%;
+			}
+
+			.footer-cert-label {
+				font-size: 18px;
+			}
+
+			.footer-bottom-bar {
+				font-size: 12px;
+			}
+
+			.btn {
+				padding: 0.75rem 1.25rem;
+				font-size: 0.95rem;
+			}
+		}
+	</style>
+</head>
+<body class="page-template-page-coming-soon-php">
+<!-- SECTION 1: HERO -->
+	<section class="hero hero-section" id="hero">
+		<div class="hero-inner">
+			<div class="hero-logo">
+				<img src="assets/logo-white.png" alt="Rensta Property Services" onerror="this.style.display='none'; var n=this.nextElementSibling; if(n) n.style.display='block';">
+				<div class="hero-logo-text hero-logo-fallback">
+					<span class="brand">RENSTA<i class="fa-solid fa-star"></i></span>
+					<span class="tagline">PROPERTY SERVICES</span>
+				</div>
+			</div>
+			<p class="hero-sub">We're almost ready.</p>
+			<h1 class="hero-heading">COMING SOON</h1>
+			<div class="trust-badges">
+				<img src="assets/trust-badges.png" alt="NAPIT, Gas Safe Register, TrustMark - Government Endorsed Quality">
+			</div>
+			<p class="hero-email-label">Leave us your email to notify you when it's ready</p>
+			<form class="hero-form" action="#" method="post" aria-label="Email signup">
+				<div class="hero-email-wrap">
+					<input type="email" name="email" placeholder="Enter your email" required>
+					<button type="submit" class="hero-get-notified-btn">Get Notified</button>
+				</div>
+			</form>
+			<p class="form-success" role="status">Thanks! We'll notify you when we're ready.</p>
+			<p class="hero-or">Or contact us at</p>
+			<a href="tel:02070460410" class="btn-hero-phone">
+				<i class="fa-solid fa-phone"></i>
+				020 7046 0410
+			</a>
+		</div>
+	</section>
+
+	<!-- SECTION 2: ABOUT -->
+	<section class="about about-section" id="about">
+		<div class="container">
+			<div class="about-inner">
+				<div class="about-image-wrap">
+					<img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800" alt="Electrician working on electrical panel" class="about-image">
+				</div>
+				<div class="about-content">
+					<p class="about-label"><img src="assets/tick-icon.png" alt="" class="section-tick-icon"> About Us</p>
+					<h2>Property Compliance and Maintenance</h2>
+					<p class="about-sub">COMPLIANCE. MAINTENANCE. DELIVERED.</p>
+					<p class="about-text">Rensta provides specialised and tailored support options to help letting agents, property and housing managers, and landlords keep their properties safe, compliant, and well maintained. From certificates to repairs, inspections, and ongoing maintenance, you get access to one reliable, dedicated team to manage your property needs.</p>
+					<a href="#hero" class="btn btn-navy">Contact Us for More Infos</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- SECTION 3: SERVICES -->
+	<section class="services services-section" id="services">
+		<div class="container">
+			<p class="services-label"><img src="assets/tick-icon.png" alt="" class="section-tick-icon"> Services</p>
+			<h2>Our Core Services</h2>
+			<div class="services-grid">
+				<div class="service-item">
+					<div class="service-icon"><i class="fa-solid fa-fire"></i></div>
+					<span>Gas and Boiler Safety</span>
+				</div>
+				<div class="service-item">
+					<div class="service-icon"><i class="fa-solid fa-plug"></i></div>
+					<span>Electrical Safety (EICR and PAT)</span>
+				</div>
+				<div class="service-item">
+					<div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
+					<span>Energy Performance Certificates (EPC)</span>
+				</div>
+				<div class="service-item">
+					<div class="service-icon"><i class="fa-solid fa-fire-extinguisher"></i></div>
+					<span>Fire Risk Assessments</span>
+				</div>
+				<div class="service-item">
+					<div class="service-icon"><i class="fa-solid fa-bell"></i></div>
+					<span>Fire Alarms and Emergency Lighting</span>
+				</div>
+				<div class="service-item">
+					<div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+					<span>Property Repairs and Call Outs</span>
+				</div>
+				<div class="service-item">
+					<div class="service-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+					<span>Fuse Box Upgrades</span>
+				</div>
+				<div class="service-item">
+					<div class="service-icon"><i class="fa-solid fa-door-closed"></i></div>
+					<span>Fire Door Checks</span>
+				</div>
+				<div class="service-item">
+					<div class="service-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+					<span>Inventory Check In and Check Out</span>
+				</div>
+				<div class="service-item">
+					<div class="service-icon"><i class="fa-solid fa-faucet"></i></div>
+					<span>Plumbing</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- SECTION 4: FOOTER -->
+	<footer class="footer footer-section" id="footer">
+		<div class="container">
+			<div class="footer-inner">
+			<div class="footer-left">
+				<div class="footer-logo">
+					<img src="assets/logo-footer.png" alt="Rensta Property Services" onerror="this.style.display='none'; var n=this.nextElementSibling; if(n) n.style.display='flex';">
+					<div class="footer-logo-text footer-logo-fallback">
+						<span class="brand">RENSTA<i class="fa-solid fa-star"></i></span>
+						<span class="tagline">PROPERTY SERVICES</span>
+					</div>
+				</div>
+				<h3 class="footer-heading">Leave us your email to notify you when it's ready</h3>
+				<form class="footer-form" action="#" method="post" aria-label="Footer email signup">
+					<div class="footer-email-row">
+						<input type="email" name="email" placeholder="Enter your email" required>
+						<button type="submit" class="footer-get-notified-btn">Get Notified</button>
+					</div>
+				</form>
+				<p class="form-success footer-success" role="status">Thanks! We'll notify you when we're ready.</p>
+			</div>
+			<div class="footer-right">
+				<p class="footer-cert-label">CERTIFICATIONS</p>
+				<div class="footer-cert-underline"></div>
+				<div class="footer-badges">
+					<img src="assets/trust-badges.png" alt="NAPIT, Gas Safe Register, TrustMark">
+				</div>
+				<a href="tel:02070460410" class="footer-phone-btn">
+					<i class="fa-solid fa-phone"></i>
+					020 7046 0410
+				</a>
+			</div>
+			</div>
+		</div>
+		<div class="footer-bottom-bar">
+			<div class="container">© 2025 Rensta Property Services. All rights reserved.</div>
+		</div>
+	</footer>
+	<script>
+(function() {
+	document.addEventListener('DOMContentLoaded', function() {
+		var forms = document.querySelectorAll('.hero-form, .footer-form');
+		forms.forEach(function(form) {
+			form.addEventListener('submit', function(e) {
+				e.preventDefault();
+				var container = form.closest('.hero-inner') || form.closest('.footer-left') || form.closest('.footer-inner') || form.parentElement;
+				var success = container ? container.querySelector('.form-success') : null;
+				if (success) {
+					success.classList.add('show');
+					form.reset();
+				}
+			});
+		});
+	});
+})();
+</script>
+</body>
+</html>

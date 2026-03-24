@@ -1,0 +1,6 @@
+# Local WordPress (large; not needed for GitHub Pages demo)
+app/
+
+# OS / editor
+.DS_Store
+*.swp
